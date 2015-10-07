@@ -5,6 +5,44 @@
 // **************************************************
 
 
+// **************************************************
+// GLOBAL GLOBAL GLOBAL
+// **************************************************
+
+
+// Box-Sizing
+// -------------------------
+
+// Set all to border box!
+* { box-sizing: border-box; }
+
+
+// HTML and BODY
+// -------------------------
+
+html {
+  // Setting HTML base font-size
+  font-size: $font-size-base;
+  // fix tap highlight on iOS
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+  // Establish base typeography
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  // Go easy on the eyes and use something other than `#000` for text
+  color: $body-color;
+  // Default value for body background
+  background-color: $body-bg;
+  // Adjust size for dumb browsers
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  // remove default margin
+  margin: 0
+}
+
 
 // **************************************************
 // Typography
@@ -13,13 +51,12 @@
 // Headlines
 // -------------------------
 
-// Nuke top margin
-// Set font family, weight, height, and color
-
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
+  // nuke top margin for vert. spacing
   margin-top: 0;
+  // consistent bottom margin
   margin-bottom: .5rem;
   font-family: $font-family-sans-serif;
   font-weight: $font-weight-bold;
@@ -76,7 +113,7 @@ ol,
 ul,
 dl {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
 }
 
 ol ol,

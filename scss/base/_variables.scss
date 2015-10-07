@@ -40,11 +40,14 @@ $accent-light:            lighten($accent-primary, 13.5%);
 $body-bg:               #fff;
 
 // Global text color on <body>
-$text-color:            #$gray-dark;
+$body-color:            $gray-dark;
 
 // Global textual link color and hover
 $link-color:            $brand-primary;
 $link-hover-color:      $brand-dark;
+
+// Headline Colors
+$headings-color:        inherit !default;
 
 
 
@@ -92,5 +95,6 @@ $font-size-h6:            ceil(($font-size-base * 0.85));
 
 // global line height
 $line-height-base:        1.5;
+
 // heading line height
 $line-height-heading:     1.1;

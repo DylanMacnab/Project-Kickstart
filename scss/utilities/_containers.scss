@@ -1,27 +1,13 @@
 // **************************************************
 // Name: containers.scss
-// Description: custom containers (parents to bootstrap)
+// Description: create custom containers for content
 // **************************************************
 
 
 // Container for general page content
 // ---------------------------
 
-.container--content {
-  margin: 0 auto;
-  width: 90%;
 
-  @include mq(md) {
-    width: 85%;
-    max-width: 1200px;
-  }
-}
+// .container--content { }
 
-
-.container--wide {
-  margin: 0 auto;
-  @include mq(md) {
-    width: 95%;
-    max-width: 1500px;
-  }
-}
+//.container--wide { }

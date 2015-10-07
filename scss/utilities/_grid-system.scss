@@ -5,27 +5,11 @@
 // ********************************************
 
 
-// How it works:
-  // 1. Set a container
-  // 2. Add a row
-  // 3. Add .col-(size)-(number)
-
-// Container Fluid class is edited
-
-
-// Bits of Advice:
-  // Container has padding
-  // Rows have negative padding
-  // It's mobile first
-  // larger class sizes are only initiated as the min width increase
-  // Add multiple classes for more dynamic classes
-  // Nest rows by adding a row within a row
-  // Styles scale up, so .col-xs-12, with look the same at any larger size
-
 
 // Custom Styles Added to Grid
 // ------------------------------------
 
+// removes padding between columns for full bleed layout
 .row-no-padding {
   [class*="col-"] {
     padding-left: 0 !important;
@@ -34,7 +18,8 @@
 }
 
 
-
+// Bootstrap Styles
+// ------------------------------------
 
 .container {
   margin-right: auto;
