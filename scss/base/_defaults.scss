@@ -1,0 +1,188 @@
+
+// **************************************************
+// Name: defaults.scss
+// Description: default styles
+// **************************************************
+
+
+
+// **************************************************
+// Typography
+// **************************************************
+
+// Headlines
+// -------------------------
+
+// Nuke top margin
+// Set font family, weight, height, and color
+
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-family: $font-family-sans-serif;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-heading;
+  color: $headings-color;
+}
+
+h1, .h1 { font-size: $font-size-h1; }
+h2, .h2 { font-size: $font-size-h2; }
+h3, .h3 { font-size: $font-size-h3; }
+h4, .h4 { font-size: $font-size-h4; }
+h5, .h5 { font-size: $font-size-h5; }
+h6, .h6 { font-size: $font-size-h6; }
+
+
+// Paragraphs
+// -------------------------
+
+// Nuke top margin and convert margin to rem
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+
+// Links
+// -------------------------
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover, &:active {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+}
+
+
+// Various Semantic Type
+// -------------------------
+
+address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
+}
+
+
+// Lists
+// -------------------------
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: .5rem;
+  margin-left: 0; // Undo browser default
+}
+
+
+// Blockquote
+// ---------------------------
+
+blockquote {
+  margin: 0 0 1rem;
+}
+
+
+
+// **************************************************
+// Other
+// **************************************************
+
+// Code
+// ---------------------
+pre {
+  // Remove browser default top margin
+  margin-top: 0;
+  // Reset browser default of `1em` to use `rem`s
+  margin-bottom: 1rem;
+}
+
+
+// Figure
+// ----------------------
+figure {
+  // Normalize adds `margin` to `figure`s as browsers apply it inconsistently.
+  // We reset that to create a better flow in-page.
+  margin: 0 0 1rem;
+}
+
+
+
+// **************************************************
+// Images
+// **************************************************
+
+img {
+  // By default, `<img>`s are `inline-block`. This assumes that, and vertically
+  // centers them. This won't apply should you reset them to `block` level.
+  vertical-align: middle;
+  // responsive images
+  max-width: 100%;
+}
+
+// Fix iOS button click
+// ----------------------
+[role="button"] {
+  cursor: pointer;
+}
+
+
+
+// **************************************************
+// Tables
+// **************************************************
+
+
+// table { }
+
+// th { }
+
+// tr { }
+
+// caption { }
+
+
+
+// **************************************************
+// Forms
+// **************************************************
+
+
+label {
+  // Allow labels can use `margin` for spacing.
+  display: inline-block;
+  margin-bottom: .5rem;
+}
+
+input,
+button,
+select,
+textarea {
+  // Remove all `margin`s so our classes don't have to do it themselves.
+  margin: 0;
+  // Normalize includes `font: inherit;`, so `font-family`. `font-size`, etc are
+  // properly inherited. However, `line-height` isn't addressed there. Using this
+  // ensures we don't need to unnecessarily redeclare the global font stack.
+  line-height: inherit;
+}

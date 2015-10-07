@@ -1,0 +1,47 @@
+// **************************************************
+// Name: helpers.scss
+// Description: common reusable helper classes
+// **************************************************
+
+
+
+// Floating
+// --------------------------------------------------
+
+// float right
+// -------------------------
+
+.right {
+  float: right;
+}
+
+
+
+// Marigin
+// ---------------------------------------------------
+
+// Remove Margin
+// ---------------------------
+.no-m {
+  margin: 0;
+}
+
+// Centering Content
+// ---------------------------------------------------
+
+.center {
+  text-align: center !important;
+}
+
+
+// Image links
+// ---------------------------------------------------
+
+// No hover state or anchor effect
+// -------------------------------
+.link-plain {
+  border: none;
+  &:hover {
+    border: none;
+  }
+}

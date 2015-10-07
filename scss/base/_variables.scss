@@ -1,0 +1,96 @@
+// **************************************************
+// Variables.scss
+// Description: To set global variables for scss
+// **************************************************
+
+
+
+// **************************************************
+// Colors
+// **************************************************
+
+
+// Gray Colors
+// -------------------------
+
+$gray-base:              #000;
+$gray-darker:            lighten($gray-base, 13.5%);
+$gray-dark:              lighten($gray-base, 20%);
+$gray:                   lighten($gray-base, 33.5%);
+$gray-light:             lighten($gray-base, 46.7%);
+$gray-lighter:           lighten($gray-base, 93.5%);
+
+
+// Brand and Accent Colors
+// -------------------------
+
+$brand-primary:           #461DDB;
+$brand-dark:              darken($brand-primary, 13.5%);
+$brand-light:             lighten($brand-primary, 13.5%);
+
+$accent-primary:          #CC278A;
+$accent-dark:             darken($accent-primary, 13.5%);
+$accent-light:            lighten($accent-primary, 13.5%);
+
+
+// Basic Global Colors
+// ---------------------------
+
+// Background color for <body>
+$body-bg:               #fff;
+
+// Global text color on <body>
+$text-color:            #$gray-dark;
+
+// Global textual link color and hover
+$link-color:            $brand-primary;
+$link-hover-color:      $brand-dark;
+
+
+
+// **************************************************
+// Fonts and Typeography
+// **************************************************
+
+
+// Font Stacks
+// -------------------------
+
+// Two Basic Font Choices
+$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif;
+
+// Global Type Font Style
+$font-family-base:        $font-family-sans-serif;
+
+// monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+
+
+// Font Weights
+// --------------------------
+
+$font-weight-light         : 300;
+$font-weight-normal        : 400;
+$font-weight-bold          : 700;
+
+
+// Font Sizes
+// ---------------------------
+
+$font-size-base:          14px !default;
+$font-size-h1:            floor(($font-size-base * 2.6));
+$font-size-h2:            floor(($font-size-base * 2.15));
+$font-size-h3:            ceil(($font-size-base * 1.7));
+$font-size-h4:            ceil(($font-size-base * 1.25));
+$font-size-h5:            $font-size-base;
+$font-size-h6:            ceil(($font-size-base * 0.85));
+
+
+// Line Height
+// -------------------------
+
+// global line height
+$line-height-base:        1.5;
+// heading line height
+$line-height-heading:     1.1;

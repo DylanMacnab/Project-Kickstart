@@ -1,0 +1,61 @@
+// ********************************************
+// Name: Navbar
+// Description: styles associated with elements in navbar
+// ********************************************
+
+
+// Navbar
+// --------------------------------------------
+.navbar {
+  background-color: $brand-3;
+  border-bottom: 2px solid $brand-1;
+  height: 70px;
+}
+
+
+// Navbar links layout
+// -------------------------
+
+.navbar--right {
+  display: none; // hidden navigation on small screens
+
+  @include mq("md") {
+    float: right;
+    display: block;
+  }
+}
+
+// Logo
+// -------------------------
+.navbar__logo {
+  padding: 15px;
+  overflow: hidden;
+  text-align: center;
+  @include mq(md) {
+    text-align: left;
+  }
+}
+
+
+// Links
+// -------------------------
+
+.navbar__link {
+  display: inline-block;
+  float: right;
+  padding: 25px 0;
+  margin: 0 25px;
+  height: 70px;
+  color: $gray-8;
+  font-family: $font-family--primary;
+  font-weight: $font-weight--bold;
+  font-size: 12px;
+  list-style: none;
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+  border-bottom: 2px solid transparent;
+  &:hover {
+    color: $gray-8;
+    border-bottom: 2px solid $accent-6;
+  }
+}

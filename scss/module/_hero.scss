@@ -1,0 +1,62 @@
+// **************************************************
+// Name: hero.scss
+// Description: styles for hero section
+// **************************************************
+
+
+// Hero
+// ---------------------------
+
+.hero {
+  background-color: red;
+  background:
+    url('/img/linegraph.svg') no-repeat 95% 90%,
+    linear-gradient( $brand-2, $brand-3);
+  position: relative;
+  background-size: 120% auto, contain;
+
+  @include mq("md") {
+    background:
+      url('/img/linegraph.svg') no-repeat 95% 90%,
+      linear-gradient( $brand-2, $brand-3);
+    background-size: 80% auto, contain;
+  }
+  @include mq("lg") {
+    background:
+      url('/img/linegraph.svg') no-repeat 90% 110%,
+      linear-gradient( $brand-2, $brand-3);
+    background-size: 65% auto, contain;
+  }
+  p {
+    font-size: 19px;
+  }
+}
+
+
+// Hero Intro content
+// ---------------------------
+.hero__intro {
+  text-align: center;
+  padding: 20px 0;
+
+  @include mq(md) {
+    padding: 50px 0 20px 0;
+    text-align: left;
+  }
+}
+
+.hero__phone {
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  width: 450px;
+  max-width: 90%;
+
+  @include mq("md") {
+    width: 375px;
+    padding-top: 30px;
+  }
+  @include mq("lg") {
+    width: 400px;
+  }
+}
