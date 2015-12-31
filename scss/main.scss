@@ -1,4 +1,3 @@
-
 // ********************************************
 // Name: Main.scss
 // Description: import all partials
@@ -8,16 +7,14 @@
 
 // B A S E : variables, reset, mq, defaults
 // --------------------------------------------
-
   @import "base/_variables";
   @import "base/_normalize";
-  @import "base/_media-queries";
   @import "base/_defaults";
 
 
 // U T I L I T I E S: Grid System, Containers, Helpers
 // --------------------------------------------
-
+  @import "base/_media-queries";
   @import "utilities/_grid-system";  // Bootstrap 3
   @import "utilities/_layout-helpers";
   @import "utilities/_containers";
@@ -28,4 +25,4 @@
 // B L O C K S: Sections, reusable code, patterns
 // --------------------------------------------
 
-  @import "blocks/_buttons";
+  @import "blocks/_example-block";

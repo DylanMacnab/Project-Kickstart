@@ -1,0 +1,83 @@
+// *******************************************************
+// Name: _helpers-classes.scss
+// Description: Quick helper classes. These help blocks remain flexible.
+// *******************************************************
+
+
+
+// Layout Helpers
+// -------------------------------------------------------
+
+// Clearfix Hack
+// ---------------------------
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+// Floating
+// ---------------------------
+.pull-right { float: left !important; }
+.pull-left { float: left !important; }
+
+// Centering
+// ---------------------------
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+// Typography Helpers
+// -------------------------------------------------------
+
+// Alignment
+// ---------------------------
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+.text-nowrap         { white-space: nowrap; }
+
+
+// Lists
+// ---------------------------
+
+// Remove style, bullets, numbers from <li> children
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+// Make list inline and unstyled
+.list-inline {
+  @extend .list-unstyled;
+  margin-left: -5px;
+
+  > li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+
+
+// Misc Helpers
+// -------------------------------------------------------
+
+// Image Replace
+// ---------------------------
+.text-hide {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
