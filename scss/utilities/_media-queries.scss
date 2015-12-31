@@ -1,16 +1,22 @@
-// ********************************************
+// *******************************************************
 // Name: Media Queries
 // Description: site wide, mobile first media queries
-// ********************************************
+// *******************************************************
 
+// Media Queries
+// -------------------------------------------------------
+
+
+// Breakpoint Variables
+// ---------------------------
 $breakpoint-xsm : 480px;
 $breakpoint-sm : 768px;
 $breakpoint-md : 992px;
 $breakpoint-lg : 1200px;
 
 
-// Media Queries -- add more breakpoints as necessary
-
+// MQ (Media Query) Mixin
+// ---------------------------
 @mixin mq($point) {
 	@if $point == "xsm" {
 		@media (min-width: $breakpoint-xsm) {
