@@ -18,7 +18,7 @@
 
 // Floating
 // ---------------------------
-.pull-right { float: left !important; }
+.pull-right { float: right !important; } // Only use when always floated.
 .pull-left { float: left !important; }
 
 // Centering
