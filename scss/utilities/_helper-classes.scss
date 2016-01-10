@@ -8,6 +8,46 @@
 // Layout Helpers
 // -------------------------------------------------------
 
+
+// Vertical Align
+// ---------------------------
+.valign-middle {
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+// Inner Container (header only)
+// ---------------------------
+.inner {
+  width: 95%;
+  margin: 0 auto;
+  @include mq(sm) {
+    width: 95%;
+  }
+  @include mq(md) {
+    width: 90%;
+    max-width: 1200px;
+  }
+  @include mq(lg) {
+    width: 80%;
+  }
+}
+
+
+// Hide on mobile
+// ---------------------------
+.hide-mobile {
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+
 // Clearfix Hack
 // ---------------------------
 .clearfix:after {
@@ -18,7 +58,7 @@
 
 // Floating
 // ---------------------------
-.pull-right { float: right !important; } // Only use when always floated.
+.pull-right { float: right !important; }
 .pull-left { float: left !important; }
 
 // Centering
@@ -43,6 +83,32 @@
 .text-nowrap         { white-space: nowrap; }
 
 
+// Fonts and General Style
+// ---------------------------
+.text-bold {
+  font-weight: bold;
+}
+.text-normal {
+  font-weight: normal;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.dark { // General Panel Text Color
+  color: white;
+}
+
+.t-shadow {
+  text-shadow: 0 0 5px rgba(black, .8);
+}
+
+.t-shadow-soft {
+  text-shadow: 0 0 5px rgba(black, .2);
+}
+
+
 // Lists
 // ---------------------------
 
@@ -64,6 +130,26 @@
   }
 }
 
+.last-list-item {
+  margin-right: 0 !important;
+  padding-right: 0 !important;
+}
+
+
+
+// Input Helpers
+// -------------------------------------------------------
+
+// Grouped
+// ---------------------------
+
+.input-group {
+  float: left;
+}
+
+.input-group__extra {
+  float: right;
+}
 
 
 // Misc Helpers
@@ -80,4 +166,13 @@
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+
+// Layout Tweaks and Spacers
+// -------------------------------------------------------
+
+// margin bottom small
+.mb-small {
+  margin-bottom: 15px;
 }
