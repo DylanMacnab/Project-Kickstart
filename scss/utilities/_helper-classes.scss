@@ -11,7 +11,7 @@
 
 // Vertical Align
 // ---------------------------
-.valign-middle {
+.vh-align {
   margin-left: auto;
   margin-right: auto;
   position: absolute;
@@ -24,18 +24,9 @@
 // Inner Container (header only)
 // ---------------------------
 .inner {
-  width: 95%;
-  margin: 0 auto;
-  @include mq(sm) {
-    width: 95%;
-  }
-  @include mq(md) {
-    width: 90%;
-    max-width: 1200px;
-  }
-  @include mq(lg) {
-    width: 80%;
-  }
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -96,18 +87,6 @@
   text-transform: uppercase;
 }
 
-.dark { // General Panel Text Color
-  color: white;
-}
-
-.t-shadow {
-  text-shadow: 0 0 5px rgba(black, .8);
-}
-
-.t-shadow-soft {
-  text-shadow: 0 0 5px rgba(black, .2);
-}
-
 
 // Lists
 // ---------------------------
@@ -136,22 +115,6 @@
 }
 
 
-
-// Input Helpers
-// -------------------------------------------------------
-
-// Grouped
-// ---------------------------
-
-.input-group {
-  float: left;
-}
-
-.input-group__extra {
-  float: right;
-}
-
-
 // Misc Helpers
 // -------------------------------------------------------
 
@@ -166,13 +129,4 @@
   padding: 0;
   position: absolute;
   width: 1px;
-}
-
-
-// Layout Tweaks and Spacers
-// -------------------------------------------------------
-
-// margin bottom small
-.mb-small {
-  margin-bottom: 15px;
 }
