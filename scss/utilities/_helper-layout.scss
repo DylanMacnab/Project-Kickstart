@@ -1,0 +1,59 @@
+// *******************************************************
+// Name: _helper-layout.scss
+// Description: Quick helper classes. These help blocks remain flexible.
+// *******************************************************
+
+
+
+// Layout Helpers
+// -------------------------------------------------------
+
+
+// Vertical Align
+// ---------------------------
+.vh-align {
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Inner Container (header only)
+// ---------------------------
+.inner {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Clearfix Hack
+// ---------------------------
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+// Floating
+// ---------------------------
+.pull-right { float: right !important; }
+.pull-left { float: left !important; }
+
+// Centering
+// ---------------------------
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+// Margins
+// -------------------------------------------------------
+
+@for $i from 0 through 100 {
+  .m-#{$i}
+    width: 60px + $i
+}

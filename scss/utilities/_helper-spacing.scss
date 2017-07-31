@@ -1,0 +1,72 @@
+// *******************************************************
+// Name: _helpers-classes.scss
+// Description: Quick helper classes. These help blocks remain flexible.
+// *******************************************************
+
+
+
+// Spacing
+// -------------------------------------------------------
+
+// Margin
+// ---------------------------
+
+// Margin All
+@for $i from 0 through 100 {
+  .m-#{$i} {
+    margin: $i#{rem};
+  }
+}
+
+// Margin Top
+@for $i from 0 through 100 {
+  .m-#{$i} {
+    margin-top: $i#{rem};
+  }
+}
+
+// Margin Bottom
+@for $i from 0 through 100 {
+  .m-#{$i} {
+    margin-bottom: $i#{rem};
+  }
+}
+
+// Margin Left
+@for $i from 0 through 100 {
+  .m-#{$i} {
+    margin-bottom: $i#{rem};
+  }
+}
+
+
+// Padding
+// ---------------------------
+
+// Padding All
+@for $i from 0 through 100 {
+  .m-#{$i} {
+    padding: $i#{rem};
+  }
+}
+
+// Padding Top
+@for $i from 0 through 100 {
+  .m-#{$i} {
+    padding-top: $i#{rem};
+  }
+}
+
+// Padding Bottom
+@for $i from 0 through 100 {
+  .m-#{$i} {
+    padding-bottom: $i#{rem};
+  }
+}
+
+// Padding Left
+@for $i from 0 through 100 {
+  .m-#{$i} {
+    padding-bottom: $i#{rem};
+  }
+}
