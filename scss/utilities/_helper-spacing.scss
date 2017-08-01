@@ -4,7 +4,6 @@
 // *******************************************************
 
 
-
 // Spacing
 // -------------------------------------------------------
 
@@ -14,6 +13,20 @@
 // Margin All
 @for $i from 0 through 100 {
   .m-#{$i} {
+    margin: $i#{rem};
+  }
+}
+
+// Margin Vertical
+@for $i from 0 through 100 {
+  .mh-#{$i} {
+    margin: $i#{rem};
+  }
+}
+
+// Margin Horizontal
+@for $i from 0 through 100 {
+  .mh-#{$i} {
     margin: $i#{rem};
   }
 }
@@ -39,6 +52,12 @@
   }
 }
 
+// Margin Auto
+.mt-auto { margin-top: auto; }
+.mr-auto { margin-right: auto; }
+.mb-auto { margin-bottom: auto; }
+.ml-auto { margin-left: auto; }
+
 
 // Padding
 // ---------------------------
@@ -46,6 +65,20 @@
 // Padding All
 @for $i from 0 through 100 {
   .m-#{$i} {
+    padding: $i#{rem};
+  }
+}
+
+// Padding Vertical
+@for $i from 0 through 100 {
+  .mv-#{$i} {
+    padding: $i#{rem};
+  }
+}
+
+// Padding Horizontal
+@for $i from 0 through 100 {
+  .mh-#{$i} {
     padding: $i#{rem};
   }
 }
@@ -70,3 +103,9 @@
     padding-bottom: $i#{rem};
   }
 }
+
+// Padding Auto
+.mt-auto { padding-top: auto; }
+.mr-auto { padding-right: auto; }
+.mb-auto { padding-bottom: auto; }
+.ml-auto { padding-left: auto; }
