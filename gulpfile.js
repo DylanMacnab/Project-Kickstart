@@ -10,7 +10,10 @@ var
   deporder = require('gulp-deporder'),
   stripdebug = require('gulp-strip-debug'),
   uglify = require('gulp-uglify'),
-  pump = require('pump');
+  pump = require('pump'),
+  cssnano = require('gulp-cssnano'),
+  sourcemaps = require('gulp-sourcemaps'),
+  sass = require('gulp-sass');
 
 
   // development mode?
@@ -62,7 +65,7 @@ var
   //   return jsbuild.pipe(gulp.dest(folder.build + 'js/'));
   // });
 
-  // js
+  // JS Processing
   gulp.task('js', function (cb) {
     pump([
           gulp.src(folder.src + 'js/**/*'),
@@ -71,6 +74,25 @@ var
       ],
       cb
     );
+  });
+
+  // SASS Processing
+  gulp.task('sass', function() {
+    return gulp.src(folder.src + 'scss/**/*.scss')
+      .pipe(sass().on('error', sass.logError))
+      .pipe(sourcemaps.write())
+      .pipe(gulp.dest(folder.build + './css'));
+  });
+
+  gulp.task('sass:watch', function() {
+    gulp.watch('./sass/**/*.scss', ['sass']);
+  });
+
+  // CSS Minification
+  gulp.task('cssnano', function() {
+    return gulp.src(folder.build + 'css/main.css')
+      .pipe(cssnano())
+      .pipe(gulp.dest(folder.build + 'css'));
   });
 
 ;

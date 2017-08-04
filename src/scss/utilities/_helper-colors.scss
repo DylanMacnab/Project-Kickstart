@@ -10,14 +10,14 @@
 
 // Background Colors
 // ---------------------------
-.bg-dark { background-color: $color-black; }
-.bg-light { background-color: $color-black; }
-.text-primary { background-color: $color-primary; }
-.bg-accent { background-color: $color-black; }
+.bg-dark { background-color: #222; }
+.bg-light { background-color: #fff; }
+.text-primary { background-color: #444; }
+.bg-accent { background-color: purple; }
 
 // Text Colors
 // ---------------------------
-.text-dark { color: $color-black; }
-.text-light { color: $color-white; }
-.text-primary { color: $color-primary; }
-.text-accent { color: $color-accent; }
+.text-dark { color: #222; }
+.text-light { color: #fff; }
+.text-primary { color: #444; }
+.text-accent { color: purple; }
