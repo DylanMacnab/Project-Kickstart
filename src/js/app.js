@@ -6,3 +6,13 @@ function saySomething(message) {
 }
 
 saySomething('hello world');
+
+
+// Babel Test Code
+
+body.addEventListener('click', () => {
+  console.log("this is an es6 arrow function call");
+});
+
+const myVariable = "some variable";
+let myOtherVariable = "some variable";

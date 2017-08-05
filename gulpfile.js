@@ -13,7 +13,8 @@ var
   pump = require('pump'),
   cssnano = require('gulp-cssnano'),
   sourcemaps = require('gulp-sourcemaps'),
-  sass = require('gulp-sass');
+  sass = require('gulp-sass'),
+  babel = require("gulp-babel");
 
 
   // development mode?
@@ -34,41 +35,11 @@ var
       .pipe(gulp.dest(out));
   });
 
-  // HTML processing
-  gulp.task('html', ['images'], function() {
-    var
-      out = folder.build + 'html/',
-      page = gulp.src(folder.src + 'html/**/*')
-        .pipe(newer(out));
-
-    // minify production code
-    if (!devBuild) {
-      page = page.pipe(htmlclean());
-    }
-
-    return page.pipe(gulp.dest(out));
-  });
-
-  // JavaScript processing
-  // gulp.task('js', function() {
-  //
-  //   var jsbuild = gulp.src(folder.src + 'js/**/*')
-  //     .pipe(deporder())
-  //     .pipe(concat('main.js'));
-  //
-  //   if (!devBuild) {
-  //     jsbuild = jsbuild
-  //       .pipe(stripdebug())
-  //       .pipe(uglify());
-  //   }
-  //
-  //   return jsbuild.pipe(gulp.dest(folder.build + 'js/'));
-  // });
-
   // JS Processing
   gulp.task('js', function (cb) {
     pump([
           gulp.src(folder.src + 'js/**/*'),
+          babel(),
           uglify(),
           gulp.dest(folder.build + 'js/')
       ],
@@ -86,13 +57,6 @@ var
 
   gulp.task('sass:watch', function() {
     gulp.watch('./sass/**/*.scss', ['sass']);
-  });
-
-  // CSS Minification
-  gulp.task('cssnano', function() {
-    return gulp.src(folder.build + 'css/main.css')
-      .pipe(cssnano())
-      .pipe(gulp.dest(folder.build + 'css'));
   });
 
 ;

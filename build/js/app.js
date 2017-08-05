@@ -1,1 +1,1 @@
-function saySomething(o){console.log(o)}saySomething("hello world");
+"use strict";function saySomething(e){console.log(e)}saySomething("hello world"),body.addEventListener("click",function(){console.log("this is an es6 arrow function call")});var myVariable="some variable",myOtherVariable="some variable";
