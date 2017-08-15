@@ -47,16 +47,32 @@ var
     );
   });
 
-  // SASS Processing
-  gulp.task('sass', function() {
+  // SASS/SCSS Processing
+  gulp.task('scss', function() {
     return gulp.src(folder.src + 'scss/**/*.scss')
       .pipe(sass().on('error', sass.logError))
       .pipe(sourcemaps.write())
       .pipe(gulp.dest(folder.build + './css'));
   });
 
-  gulp.task('sass:watch', function() {
-    gulp.watch('./sass/**/*.scss', ['sass']);
+  // Automated Tasks //
+  // *****************
+
+  // run all tasks
+  gulp.task('run', ['images', 'scss', 'js']);
+  // watch for changes
+  gulp.task('watch', function() {
+    // images
+    gulp.watch(folder.src + 'images/**/*', ['images']);
+    // js
+    gulp.watch(folder.src + 'js/**/*', ['js']);
+    // sass
+    gulp.watch(folder.src + 'scss/**/*', ['scss']);
   });
+
+  // Default Task //
+  // **************
+
+  gulp.task('default', ['run', 'watch']);
 
 ;

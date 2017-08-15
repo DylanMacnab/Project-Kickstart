@@ -5,9 +5,11 @@
 .DS_Store?
 node_modules
 
-# General CodeKit files to ignore
-config.codekit
-/min
+# Processed CSS #
+#################
+build
+build/css/*.css
+build/css
 
 # Compiled source #
 ###################
